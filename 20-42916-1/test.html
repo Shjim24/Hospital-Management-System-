@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+    <div class="login-container">
+        <form name="myForm" action="action.php" onsubmit="return validateForm()" method="post">
+            <h2>Login</h2>
+            <input type="text" name="fname" placeholder="Username" >
+            <input type="password" name="password" placeholder="Password" >
+            <button type="submit">Login</button>
+            <a href="forgot_password.php">Forgot Password?</a>
+            <a href="register.php">Register</a>
+        </form>
+    </div>
+</body>
+</html>
+
